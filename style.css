@@ -1,0 +1,179 @@
+body{
+    font-size: small;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.container{
+    height: 100%;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.part1{
+    width: 1100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.nav-left{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 40px;
+    animation: bordersize 1.5s infinite;
+}
+
+.nav-mid{
+    font-size: 40px;
+    font-weight: bolder;
+    animation: fontsize 1s infinite;
+    color: brown;
+}
+
+.nav-right{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 40px;
+    animation: bordersize 1.5s infinite;
+}
+
+.part2{
+    width: 1100px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行3列 */
+    gap: 10px; /* 子元素之间的间距 */
+    user-select: none;
+    justify-items: center; /* 水平居中 */
+}
+
+.img-container{
+    width: 90%;
+    height: 100%;
+    border-radius: 10%;
+    overflow: hidden;
+    border: 1rem solid pink;
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+
+.img-container:hover{
+    border-color: rgb(255, 95, 95);
+}
+
+.part2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.part2 p{
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 16px;
+    font-weight: 1000;
+}
+
+
+
+.part3{
+    width: 1050px;
+    height: 300px;
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 18px;
+    white-space: pre-wrap;
+    background-color: pink;
+    padding: 20px;
+    border-radius: 50px;
+    animation: letter 3s infinite;
+    user-select: none;
+    margin-bottom: 20px;
+}
+
+/*心跳动画*/
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bordersize {
+    0% {
+        outline: 0.3rem solid black;
+    }
+    50% {
+        outline: 1rem solid pink;
+    }
+    100% {
+        outline: 0.3rem solid black;
+    }
+}
+
+@keyframes fontsize {
+    0% {
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        transform: scale(1.5);
+        filter: hue-rotate(180deg);        
+    }
+    100% {
+        transform: scale(1);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes letter {
+    0% {
+        background-color: pink;
+    }
+    50% {
+        background-color: rgb(255, 179, 192);
+    }
+    100% {
+        tbackground-color: pink;
+    }
+}
+
+/*心*/
+.heart { 
+    animation: heartbeat 1.5s infinite;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.love{
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 18px;
+    font-weight: 1000;
+}
